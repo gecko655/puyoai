@@ -255,6 +255,7 @@ FrameResponse TestLockitAI::playOneFrame(const FrameRequest& request)
             r_player[0].zenkesi = 0;
         }
         response = sendmes(&r_player[0], &coma);
+        LOG(ERROR) <<  response.decision.toString() << (response.decision.isValid()? "true":"false") <<endl;
     } // p1 act_once
 
     if (r_player[0].nex_on == 1) { // 事前手決めスタート
